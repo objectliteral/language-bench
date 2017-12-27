@@ -1,0 +1,5 @@
+*.o
+*.class
+
+c/prime
+rust/prime
