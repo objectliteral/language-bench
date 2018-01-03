@@ -7,6 +7,12 @@ public class Prime {
 
     public static void Main(String[] args) {
 
+        Console.WriteLine("There are " + CountPrimes() + " prime numbers between 0 and " + MAX);
+
+    }
+
+    private static int CountPrimes() {
+
         int n = 1;
 
         for (int i = 3; i <= MAX; i += 2) {
@@ -27,7 +33,7 @@ public class Prime {
 
         }
 
-        Console.WriteLine("There are " + n + " prime numbers between 0 and " + MAX);
+        return n;
 
     }
 

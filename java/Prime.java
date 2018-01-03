@@ -4,6 +4,12 @@ public class Prime {
 
     public static void main(String args[]) {
 
+        System.out.println("There are " + countPrimes() + " prime numbers between 0 and " + MAX);
+
+    }
+
+    private static int countPrimes() {
+
         int n = 1;
 
         for (int i = 3; i <= MAX; i += 2) {
@@ -24,7 +30,7 @@ public class Prime {
 
         }
 
-        System.out.println("There are " + n + " prime numbers between 0 and " + MAX);
+        return n;
 
     }
 

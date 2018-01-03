@@ -1,10 +1,10 @@
 const MAX = 10000000;
 
-var countPrimes = function (n) {
+var countPrimes = function () {
     
     var count = 1;
     
-    for (var i = 3; i <= n; i += 2) {
+    for (var i = 3; i <= MAX; i += 2) {
 
         var isPrime = true;
         var t = 3;
@@ -26,4 +26,4 @@ var countPrimes = function (n) {
 
 }
 
-console.log(`There are ${countPrimes(MAX)} prime numbers between 0 and 10000000`);
+console.log(`There are ${countPrimes()} prime numbers between 0 and 10000000`);

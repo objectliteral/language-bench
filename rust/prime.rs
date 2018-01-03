@@ -1,8 +1,8 @@
 const MAX: u32 = 10_000_000;
 
-fn count_primes() -> String {
+fn count_primes() -> u16 {
     
-    let mut n = 1;
+    let mut n: u16 = 1;
     let mut i: u32 = 3;
 
     while i < MAX+1 {
@@ -28,11 +28,11 @@ fn count_primes() -> String {
 
     }
 
-    return format!("There are {} prime numbers between 0 and {}", n, MAX);
+    return n;
 }
 
 fn main() {
     
-    println!("{}", count_primes());
+    println!("There are {} prime numbers between 0 and {}", count_primes(), MAX);
 
 }
