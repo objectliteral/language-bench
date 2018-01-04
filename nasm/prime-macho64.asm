@@ -19,23 +19,23 @@ check:
 loop1:
     mov rcx, 1
     mov rbx, 3
-check2:
 
     push rax
     push rbx
     push rdx
     push rdi
     mov rdi, rax
-    
     call isqrt64_ceil
+    mov r8, rax
     pop rdi
     pop rdx
     pop rbx
-
-    cmp rbx, rax
-    jl loop2
-
     pop rax
+
+check2:
+
+    cmp rbx, r8
+    jl loop2
 
     cmp rcx, 1
     jnz check22
@@ -44,8 +44,6 @@ check22:
     add rax, 2
     jmp check
 loop2:
-
-    pop rax
 
     push rdx
     push rax
