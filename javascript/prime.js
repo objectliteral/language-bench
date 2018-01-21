@@ -10,7 +10,7 @@ var countPrimes = function () {
         var t = 3;
         
         while (t <= Math.sqrt(i)) {
-            if (i % t == 0) {
+            if (i % t === 0) {
                 isPrime = false;
                 break;
             }
