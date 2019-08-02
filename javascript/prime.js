@@ -8,8 +8,9 @@ var countPrimes = function () {
 
         var isPrime = true;
         var t = 3;
+        var sqrti = Math.sqrt(i);
         
-        while (t <= Math.sqrt(i)) {
+        while (t <= sqrti) {
             if (i % t === 0) {
                 isPrime = false;
                 break;

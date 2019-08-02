@@ -6,9 +6,10 @@ i <- 3;
 while (i <= MAX) {
   
   isPrime <- TRUE;
+  sqrti <- sqrt(i);
   j <- 3;
   
-  while (j <= sqrt(i)) {
+  while (j <= sqrti) {
     if (i %% j == 0) {
       isPrime <- FALSE;
       break;

@@ -9,9 +9,10 @@ int countPrimes(int n) {
     for (int i = 3; i <= n; i += 2) {
         
         bool is_prime = true;
-        int t = 3;
+        float sqrti = sqrt(i);
+	int t = 3;
 
-        while (t <= sqrt(i)) {
+        while (t <= sqrti) {
             if (i % t == 0) {
                 is_prime = false;
                 break;

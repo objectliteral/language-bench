@@ -18,9 +18,10 @@ func countPrimes(until int) int {
 	for i := 3; i <= until; i += 2 {
 
 		isPrime := true
+		sqrti := int(math.Sqrt(float64(i)))
 		t := 3
 
-		for t <= int(math.Sqrt(float64(i))) {
+		for t <= sqrti {
 			if i%t == 0 {
 				isPrime = false
 				break

@@ -10,9 +10,10 @@ def count_primes (n):
     while (i <= n):
 
         is_prime = True
+        sqrti = sqrt(i)
         t = 3
 
-        while (t <= sqrt(i)):
+        while (t <= sqrti):
 
             if (i % t == 0):
                 is_prime = False

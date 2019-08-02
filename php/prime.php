@@ -8,9 +8,10 @@ $i = 3;
 while ($i < $MAX) {
 
     $is_prime = true;
+    $sqrti = sqrt($i);
     $j = 3;
 
-    while ($j <= sqrt($i)) {
+    while ($j <= $sqrti) {
 
         if ($i % $j == 0) {
             $is_prime = false;
