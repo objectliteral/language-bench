@@ -1,8 +1,8 @@
 const MAX: u32 = 10_000_000;
 
-fn count_primes() -> u16 {
+fn count_primes() -> u32 {
     
-    let mut n: u16 = 1;
+    let mut n: u32 = 1;
     let mut i: u32 = 3;
 
     while i < MAX+1 {
