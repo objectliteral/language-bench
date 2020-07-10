@@ -5,8 +5,9 @@
 int countPrimes(int n) {
 
     int count = 1;
+    int i = 3;
 
-    for (int i = 3; i <= n; i += 2) {
+    for (; i <= n; i += 2) {
         
         bool is_prime = true;
         float sqrti = sqrt(i);
