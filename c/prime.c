@@ -1,15 +1,28 @@
 #include <stdio.h>
-#include <math.h>
 #include <stdbool.h>
+
+float d_sqrt(float n) {
+    int i;
+    float x, y;
+    x = n * 0.5;
+    y = n;
+    i = *(int *) &y;
+    i = 0x5f3759df - (i >> 1);
+    y = *(float *) &i;
+    y = y * (1.5 - (x * y * y));
+    y = y * (1.5 - (x * y * y));
+    return n * y;
+}
 
 int countPrimes(int n) {
 
     int count = 1;
+    int i = 3;
 
-    for (int i = 3; i <= n; i += 2) {
+    for (; i <= n; i += 2) {
         
         bool is_prime = true;
-        float sqrti = sqrt(i);
+        float sqrti = d_sqrt(i);
 	int t = 3;
 
         while (t <= sqrti) {
